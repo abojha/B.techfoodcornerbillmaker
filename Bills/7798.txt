@@ -1,0 +1,20 @@
+	Welcome Binary Dose Mini Mall
+ Bill Number:7798
+ Customer Name:dfadf
+ Phone Number:9179*5fgsg
+ E-mail:dfasdf
+==================================================
+Products			Quantity			Price
+==================================================
+ Polo			 1			1500
+ Polo			 1			1500
+ Polo			 1			1500
+ Polo			 1			1500
+
+==================================================
+
+ Sub Amount:			RS.6000.00
+ Tax Amount:			RS.45.00
+ Total Amount:			RS.6045.00
+==================================================
+

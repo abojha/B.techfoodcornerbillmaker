@@ -1,0 +1,18 @@
+	Welcome Binary Dose Mini Mall
+ Bill Number:8768
+ Customer Name:Shivam Ojha
+ Phone Number:9131113581
+ E-mail:
+==================================================
+Products			Quantity			Price
+==================================================
+ Levis			 2			10000
+ Roadstar			 2			3600
+
+==================================================
+
+ Sub Amount:			RS.13600.00
+ Tax Amount:			RS.118.00
+ Total Amount:			RS.13718.00
+==================================================
+

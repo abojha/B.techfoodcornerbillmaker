@@ -1,0 +1,26 @@
+	Welcome Binary Dose Mini Mall
+ Bill Number:9772
+ Customer Name:fdfasdf
+ Phone Number:Abhay
+ E-mail:dfasdfasd
+==================================================
+Products			Quantity			Price
+==================================================
+ Roadstar			 1			1800
+ Roadstar			 1			1800
+ Roadstar			 1			1800
+ Roadstar			 1			1800
+ Roadstar			 1			1800
+ Roadstar			 1			1800
+ Polo			 1			1800
+ Polo			 1			1800
+ Polo			 1			1800
+ Polo			 1			1800
+
+==================================================
+
+ Sub Amount:			RS.18000.00
+ Tax Amount:			RS.162.00
+ Total Amount:			RS.18162.00
+==================================================
+
