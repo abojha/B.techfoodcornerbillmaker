@@ -38,7 +38,7 @@ class Bill_App:
 
 
         #Product Categories, SubCategories, Items, Prices getting from CSV file
-        functionCategory()
+        self.ListOfCategories = functionCategory()
         self.FoodItemsDictionary = {}
 
         #image1
@@ -128,7 +128,7 @@ class Bill_App:
         self.labelCategory=Label(productFrame, text="Select Categories", font=("arial", 12, "bold"), bg = b, fg = w)
         self.labelCategory.grid(row=0, column=0, sticky=W, padx=5, pady=2)
 
-        self.comboCategory=ttk.Combobox(productFrame, font=("arial", 10, "bold"), value=ListOfCategories, width=24, state="readonly")
+        self.comboCategory=ttk.Combobox(productFrame, font=("arial", 10, "bold"), value=self.ListOfCategories, width=24, state="readonly")
         self.comboCategory.current(0)
         self.comboCategory.grid(row=0, column=1, sticky=W, padx=5, pady=2)
         self.comboCategory.bind("<<ComboboxSelected>>", self.functionProductAdd)
@@ -384,7 +384,7 @@ class Bill_App:
         self.labelAddCategory=Label(top, text="Add Categories", font=("arial", 12, "bold"), bg = "black", fg = "white")
         self.labelAddCategory.grid(row=0, column=0, sticky=W, padx=5, pady=2)
 
-        self.comboAddCategory=ttk.Combobox(top, font=("arial", 10, "bold"), value=ListOfCategories, width=24)
+        self.comboAddCategory=ttk.Combobox(top, font=("arial", 10, "bold"), value=self.ListOfCategories, width=24)
         self.comboAddCategory.grid(row=1, column=0, sticky=W, padx=5, pady=2)
 
         #Select Food Item to Add
@@ -416,7 +416,9 @@ class Bill_App:
 
         #Call function AddtoCSV in product.py
         AddItemtoCSV(self.ListOfNewItems)
-        functionCategory()
+        self.ListOfCategories = functionCategory()
+        self.comboCategory.config(values=self.ListOfCategories)
+        self.comboAddCategory.config(values=self.ListOfCategories)
         
 
         

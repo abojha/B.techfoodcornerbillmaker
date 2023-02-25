@@ -2,18 +2,18 @@ import os
 import csv
 from main import *
 
-ListOfCategories = []
-# FoodItemsDictionary = {}
+
 
 
 def functionCategory():
-    global ListOfCategories
+    ListOfCategories = []
     os.chdir("csv/")
     for file in os.listdir():
         i = file.split(".")
         ListOfCategories.append(i[0].capitalize())
     ListOfCategories.sort()
     os.chdir("../")
+    return ListOfCategories
 
 
 def functionFoodItems(CategorySelect):
