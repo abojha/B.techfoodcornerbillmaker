@@ -43,7 +43,7 @@ class Bill_App:
 
         #image1
         img1=Image.open("images/img1.jpg")
-        img1=img1.resize((310,130),Image.ANTIALIAS) 
+        img1=img1.resize((310,130),Image.Resampling.LANCZOS) 
         self.photoimg1=ImageTk.PhotoImage(img1)
 
         label_img1=Label(self.root, image=self.photoimg1, bg=b)
@@ -52,7 +52,7 @@ class Bill_App:
 
         #image2
         img2=Image.open("images/img2.jpg")
-        img2=img2.resize((310,130),Image.ANTIALIAS)
+        img2=img2.resize((310,130),Image.Resampling.LANCZOS)
         self.photoimg2=ImageTk.PhotoImage(img2)
 
         label_img2=Label(self.root, image=self.photoimg2, bg=b)
@@ -61,7 +61,7 @@ class Bill_App:
 
         #image3
         img3=Image.open("images/img3.jpg")
-        img3=img3.resize((310,130),Image.ANTIALIAS)
+        img3=img3.resize((310,130),Image.Resampling.LANCZOS)
         self.photoimg3=ImageTk.PhotoImage(img3)
 
         label_img3=Label(self.root, image=self.photoimg3, bg=b)
@@ -69,7 +69,7 @@ class Bill_App:
 
         #image4
         img4=Image.open("images/img2.jpg")
-        img4=img4.resize((310,130),Image.ANTIALIAS)
+        img4=img4.resize((310,130),Image.Resampling.LANCZOS)
         self.photoimg4=ImageTk.PhotoImage(img4)
 
         label_img4=Label(self.root, image=self.photoimg4, bg=b)
@@ -77,7 +77,7 @@ class Bill_App:
 
         #image 5
         img5=Image.open("images/img1.jpg")
-        img5=img5.resize((310,130),Image.ANTIALIAS)
+        img5=img5.resize((310,130),Image.Resampling.LANCZOS)
         self.photoimg5=ImageTk.PhotoImage(img5)
 
         label_img5=Label(self.root, image=self.photoimg5, bg=b)
@@ -168,7 +168,7 @@ class Bill_App:
 
         #image12
         img12=Image.open("images/img12.jpg")
-        img12=img12.resize((490,340),Image.ANTIALIAS)
+        img12=img12.resize((490,340),Image.Resampling.LANCZOS)
         self.photoimg12=ImageTk.PhotoImage(img12)
 
         label_img12=Label(middleFrame, image=self.photoimg12)
@@ -177,7 +177,7 @@ class Bill_App:
 
         #image21
         img21=Image.open("images/img21.jpg")
-        img21=img21.resize((490,340),Image.ANTIALIAS)
+        img21=img21.resize((490,340),Image.Resampling.LANCZOS)
         self.photoimg21=ImageTk.PhotoImage(img21)
 
         label_img21=Label(middleFrame, image=self.photoimg21)
