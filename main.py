@@ -300,7 +300,7 @@ class Bill_App:
 
         #     messagebox.showerror("Name", "Please Fill a Correct Name")
 
-        if self.product.get()=="":
+        elif self.product.get()=="":
             messagebox.showerror("Error","Please Add to Cart Product")
 
         
