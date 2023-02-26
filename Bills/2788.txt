@@ -1,0 +1,23 @@
+B.TECH FOOD CORNER
+ Bill Number: 2788
+ Customer Name: 
+ Phone Number: 
+ E-mail: 
+==================================================================================
+Food Items                              Plate(s)                         Price(Rs)
+==================================================================================
+Aloo tikki burger                          1                                    60
+Aloo tikki burger                          1                                    60
+Aloo tikki burger                          1                                    60
+Aloo tikki burger                          1                                    60
+Cheese burger                              1                                   100
+Cheese burger                              1                                   100
+Cheese burger                              1                                   100
+Cheese burger                              1                                   100
+
+==================================================================================
+Sub Amount                                                           RS.640.00        
+ Tax Amount: 					RS.540.00
+ Total Amount: 					RS.1180.00Food Items                              Plate(s)                         Price(Rs)
+==================================================================================
+
