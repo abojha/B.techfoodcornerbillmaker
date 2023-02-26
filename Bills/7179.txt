@@ -1,0 +1,19 @@
+B.TECH FOOD CORNER
+ Bill Number: 7179
+ Customer Name: Abhay Ojha
+ Phone Number: 9179577828
+ E-mail: 
+====================================================================================
+Food Items                              Plate(s)                         Price(Rs)
+====================================================================================
+Aloo tikki burger                          1                                    60
+Aloo tikki burger                          1                                    60
+Aloo tikki burger                          1                                    60
+Aloo tikki burger                          2                                   120
+Cheese burger                              5                                   500
+====================================================================================
+Sub Amount                                                               RS.800.00
+Tax Amount                                                               RS.700.00
+Total Amount                                                            RS.1500.00
+====================================================================================
+

@@ -202,13 +202,10 @@ class Bill_App:
 
         #Text Area and Scroll Bar
         scrollY=Scrollbar(rightLabelFrame, orient=VERTICAL)
-        scrollX=Scrollbar(rightLabelFrame, orient=HORIZONTAL)
-        self.textarea=Text(rightLabelFrame, yscrollcommand=scrollY.set,xscrollcommand=scrollX.set, wrap=NONE, bg = b, fg= w, font=("times new roman", 12, "bold"))
+        self.textarea=Text(rightLabelFrame, yscrollcommand=scrollY.set, bg = "white", fg= "black", font=("Courier New", 12, "bold"))
         scrollY.pack(side=RIGHT, fill=Y)
-        scrollX.pack(side=BOTTOM, fill=X)
-        scrollY.config(command=self.textarea.yview)
-        scrollX.config(command=self.textarea.xview)
-        self.textarea.pack(fill=BOTH, expand=1)
+        # scrollY.config(command=self.textarea.yview)
+        self.textarea.pack()
 
         #Bill counter LabelFrame
         bottomFrame=LabelFrame(mainFrame, text="Bill Counter", font=("times new roman", 12, "bold"), bg = b, fg = r)
@@ -275,9 +272,9 @@ class Bill_App:
         self.textarea.insert(END, f"\n Phone Number: {self.cPhoneNumber.get()}")
         self.textarea.insert(END, f"\n E-mail: {self.cEmail.get()}")
 
-        self.textarea.insert(END, f"\n{'='*84}\n")
-        self.textarea.insert(END, f"{'Food Items':35s}{' ':5s}{'Plate(s)':8s}{' ':25s}{'Price(Rs)':9s}")
-        self.textarea.insert(END, f"\n{'='*84}\n")
+        self.textarea.insert(END, f"\n{'='*45}\n")
+        self.textarea.insert(END, f"{'Food Items':22s}{' ':3s}{'Plate(s)':8s}{' ':3s}{'Price(Rs)':9s}")
+        self.textarea.insert(END, f"\n{'-'*45}\n")
 
 
 
@@ -289,7 +286,8 @@ class Bill_App:
         if self.product.get()=="":
             messagebox.showerror("Error", "Please Select Product")
         else:
-            self.textarea.insert(END, f"\n{self.product.get():35s}{' ':5s}{self.quantity.get():^8d}{' ':25s}{self.m:>9d}")
+            self.textarea.insert(END, f"\n{self.product.get():22s}{' ':3s}{self.quantity.get():^8d}{' ':3s}{self.m:>9d}")
+
             self.subtotal.set(str('RS.%.2f'%(sum(self.l))))
             self.taxInput.set(str('RS.%.2f'%((((sum(self.l))-(self.prices.get()))*self.Tax)/100)))
             self.Total.set(str('RS.%.2f'%(((sum(self.l)) + ((((sum(self.l)) - (self.prices.get()))*self.Tax)/100)))))
@@ -308,11 +306,11 @@ class Bill_App:
             text = self.textarea.get(10.0,(10.0+float(len(self.l))))
             self.welcome()
             self.textarea.insert(END, text)
-            self.textarea.insert(END, f"{'='*84}")
-            self.textarea.insert(END, f"\n{'Sub Amount':35s}{' '*34}{self.subtotal.get():>13s}")
-            self.textarea.insert(END, f"\n{'Tax Amount':35s}{' '*34}{self.taxInput.get():>13s}")
-            self.textarea.insert(END, f"\n{'Total Amount':35s}{' '*34}{self.Total.get():>13s}")
-            self.textarea.insert(END, f"\n{'='*84}\n")
+            self.textarea.insert(END, f"{'='*45}")
+            self.textarea.insert(END, f"\n{'Sub Amount':29s}{' '*3}{self.subtotal.get():>13s}")
+            self.textarea.insert(END, f"\n{'Tax Amount':29s}{' '*3}{self.taxInput.get():>13s}")
+            self.textarea.insert(END, f"\n{'Total Amount':29s}{' '*3}{self.Total.get():>13s}")
+            self.textarea.insert(END, f"\n{'='*45}\n")
     
     def functionSaveBill(self):
         op = messagebox.askyesno("Save Bill", "Do You Want to Save the Bill?")
@@ -422,7 +420,6 @@ class Bill_App:
         self.ListOfCategories = functionCategory()
         self.comboCategory.config(values=self.ListOfCategories)
         self.comboAddCategory.config(values=self.ListOfCategories)
-        
 
         
 
