@@ -424,6 +424,9 @@ class Bill_App:
         self.ListOfCategories = functionCategory()
         self.comboCategory.config(values=self.ListOfCategories)
         self.comboAddCategory.config(values=self.ListOfCategories)
+        self.comboAddCategory.set('')
+        self.entryAddFoodItems.delete(0, END)
+        self.entryAddPrice.delete(0, END)
 
         
 
