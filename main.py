@@ -135,7 +135,7 @@ class Bill_App:
 
 
         #Product Name
-        self.labelProductName=Label(productFrame, text="Product Name", font=("arial", 12, "bold"), bg = b, fg = w, bd=4)
+        self.labelProductName=Label(productFrame, text="Food Item", font=("arial", 12, "bold"), bg = b, fg = w, bd=4)
         self.labelProductName.grid(row=1, column=0, sticky=W, padx=5, pady=2)
 
         self.comboProductName=ttk.Combobox(productFrame, textvariable=self.product,values=[""], font=("arial", 10, "bold"), width=24, state="readonly")
@@ -365,6 +365,10 @@ class Bill_App:
             self.FoodItemsDictionary = functionFoodItems(CategorySelected)
             self.comboProductName.config(values=list(self.FoodItemsDictionary.keys()))
             self.comboProductName.current(0)
+            ProductName = self.comboProductName.get()
+            self.comboPrice.config(values=self.FoodItemsDictionary[ProductName])
+            self.quantity.set(1)
+            self.comboPrice.current(0)
 
     #FUNCTION TO ADD PRICE
     def functionPrice(self, events=""):
