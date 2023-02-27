@@ -23,6 +23,7 @@ class Bill_App:
 
         #regular expression for email validation
         self.regexEmail = re.compile(r'([A-Za-z0-9])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')
+        self.regexName = re.compile('[A-Za-z]{2,25}\s{0,1}[A-Za-z]{0,25}')
 
         # VARIABLES
         self.cName = StringVar()
@@ -272,7 +273,7 @@ class Bill_App:
         self.textarea.delete(1.0, END)
         self.textarea.insert(END,"B.TECH FOOD CORNER")
         self.textarea.insert(END, f"\n Bill Number: {self.billNO.get()}")
-        self.textarea.insert(END, f"\n Customer Name: {self.cName.get()}")
+        self.textarea.insert(END, f"\n Customer Name: {self.cName.get().title()}")
         self.textarea.insert(END, f"\n Phone Number: {self.cPhoneNumber.get()}")
         self.textarea.insert(END, f"\n E-mail: {self.cEmail.get()}")
 
@@ -297,16 +298,21 @@ class Bill_App:
             self.Total.set(str('RS.%.2f'%(((sum(self.l)) + ((((sum(self.l)) - (self.prices.get()))*self.Tax)/100)))))
     
     def functionGenerateBill(self):
+        #Validate Phone Number
         if self.cPhoneNumber.get().isnumeric() == False or len(self.cPhoneNumber.get())!=10:
             messagebox.showerror("Phone Number", "Please Fill Correct Number")
 
-        #     messagebox.showerror("Name", "Please Fill a Correct Name")
+        #Validate Customer Name
+        elif re.fullmatch(self.regexName, self.cName.get()) == None:
+            messagebox.showerror("Name", "Please fill Correct Name")
 
+
+        #Validate E-mail
         elif self.cEmail.get() != "" and re.fullmatch(self.regexEmail, self.cEmail.get()) == None:
             messagebox.showerror("E-mail", "Please Fill Correct E-mail")
         
 
-
+        #Validate If you add any product or not
         elif self.product.get()=="":
             messagebox.showerror("Error","Please Add to Cart Product")
 
