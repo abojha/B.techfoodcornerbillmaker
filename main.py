@@ -202,7 +202,7 @@ class Bill_App:
 
         #Text Area and Scroll Bar
         scrollY=Scrollbar(rightLabelFrame, orient=VERTICAL)
-        self.textarea=Text(rightLabelFrame, yscrollcommand=scrollY.set, bg = "white", fg= "black", font=("Courier New", 12, "bold"))
+        self.textarea=Text(rightLabelFrame, yscrollcommand=scrollY.set, bg = b, fg= w, font=("Courier New", 12, "bold"))
         scrollY.pack(side=RIGHT, fill=Y)
         # scrollY.config(command=self.textarea.yview)
         self.textarea.pack()
