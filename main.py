@@ -414,10 +414,14 @@ class Bill_App:
         if self.comboAddCategory.get() == "" or self.entryAddFoodItems.get() == "" or self.entryAddPrice.get() == "":
             messagebox.showerror("Error", "Please Fill All Fields")
         
-        self.ListOfNewItems = []
-        self.ListOfNewItems.append(self.comboAddCategory.get().capitalize())
-        self.ListOfNewItems.append(self.entryAddFoodItems.get().capitalize())
-        self.ListOfNewItems.append(self.entryAddPrice.get().capitalize())
+        elif self.entryAddPrice.get().isnumeric() == False:
+            messagebox.showerror("Error", "Please fill correct Price")   
+
+        else:
+            self.ListOfNewItems = []
+            self.ListOfNewItems.append(self.comboAddCategory.get().capitalize())
+            self.ListOfNewItems.append(self.entryAddFoodItems.get().capitalize())
+            self.ListOfNewItems.append(self.entryAddPrice.get().capitalize())
 
         #Call function AddtoCSV in product.py
         AddItemtoCSV(self.ListOfNewItems)
