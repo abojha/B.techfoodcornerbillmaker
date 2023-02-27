@@ -6,6 +6,7 @@ from tkinter import ttk
 from tkinter import messagebox
 from PIL import Image, ImageTk
 from product import *
+import re
 
 
 class Bill_App:
@@ -19,6 +20,9 @@ class Bill_App:
         b = "black"
         w = "white"
         r = "red"
+
+        #regular expression for email validation
+        self.regexEmail = re.compile(r'([A-Za-z0-9])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')
 
         # VARIABLES
         self.cName = StringVar()
@@ -297,6 +301,11 @@ class Bill_App:
             messagebox.showerror("Phone Number", "Please Fill Correct Number")
 
         #     messagebox.showerror("Name", "Please Fill a Correct Name")
+
+        elif self.cEmail.get() != "" and re.fullmatch(self.regexEmail, self.cEmail.get()) == None:
+            messagebox.showerror("E-mail", "Please Fill Correct E-mail")
+        
+
 
         elif self.product.get()=="":
             messagebox.showerror("Error","Please Add to Cart Product")
