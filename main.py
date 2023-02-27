@@ -382,7 +382,8 @@ class Bill_App:
         top = Toplevel()
         top.title("Add More Items")
         top.configure(bg="black")
-        top.geometry("200x230")
+        top.geometry("200x230+1080+450")
+        top.resizable(False, False)
 
 
         #Select a Category to add 
