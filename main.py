@@ -190,7 +190,7 @@ class Bill_App:
 
         #Search 
         searchFrame= Frame(mainFrame, bd=2, bg = b)
-        searchFrame.place(x=1030, y=15, width=500, height=40)
+        searchFrame.place(x=1030, y=15, width=450, height=40)
 
         self.labelBill=Label(searchFrame, text="Bill Number", font=("arial", 12, "bold"), bg = r, fg = w)
         self.labelBill.grid(row=0, column=0, sticky=W, padx=1)

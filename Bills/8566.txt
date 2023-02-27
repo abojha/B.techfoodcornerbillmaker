@@ -1,0 +1,17 @@
+B.TECH FOOD CORNER
+ Bill Number: 8566
+ Customer Name: Anjali Jha
+ Phone Number: 6260354811
+ E-mail: anjalijha301@gmail.com
+=============================================
+Food Items               Plate(s)   Price(Rs)
+---------------------------------------------
+Aloo tikki burger           1              60
+Dal                         1              40
+Dosa                        1              90
+=============================================
+Sub Amount                          RS.190.00
+Tax Amount                          RS.100.00
+Total Amount                        RS.290.00
+=============================================
+
